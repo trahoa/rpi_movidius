@@ -11,5 +11,5 @@ Movidius NCSDK on Raspberry Pi 3
 ```bash
 git clone https://github.com/trahoa/rpi_movidius.git
 cd rpi_movidius
-sudo bash setup_all.sh
+bash setup_all.sh
 ```
