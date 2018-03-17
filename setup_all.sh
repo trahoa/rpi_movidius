@@ -15,6 +15,7 @@ sudo /etc/init.d/dphys-swapfile start
 
 # Download NCSDK and copy the new install-opencv.sh
 mkdir -p ~/workspace/ncsdk
+cp install-opencv.sh ~/workspace
 cd ~/workspace
 curl -L https://github.com/movidius/ncsdk/archive/v1.12.00.01.tar.gz | tar xz -C ncsdk --strip-components 1
 git clone https://github.com/movidius/ncappzoo
@@ -22,8 +23,8 @@ git clone https://github.com/movidius/ncappzoo
 # Install OpenCV
 cd ~/workspace/ncsdk
 mv install-opencv.sh install-opencv.sh.bak
-chmod +x ~/install-opencv.sh
-cp ~/install-opencv.sh .
+mv ../install-opencv.sh .
+chmod +x install-opencv.sh
 
 # Install NCSDK
 sudo make install
