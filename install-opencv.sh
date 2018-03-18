@@ -8,18 +8,22 @@ sudo apt-get install -y libcanberra-gtk*
 sudo apt-get install -y libatlas-base-dev gfortran
 sudo apt-get install -y python2.7-dev python3-dev
 
-cd ~/workspace/
-mkdir opencv
-curl -L https://github.com/opencv/opencv/archive/3.3.0.tar.gz | tar xz -C opencv --strip-components 1
-mkdir opencv_contrib
-curl -L https://github.com/opencv/opencv_contrib/archive/3.3.0.tar.gz | tar xz -C opencv_contrib --strip-components 1
+cd ~/workspace
+wget https://github.com/opencv/opencv/archive/3.3.0.zip
+unzip 3.3.0.zip
+mv opencv-3.3.0 opencv
+rm 3.3.0.zip
+wget https://github.com/opencv/opencv_contrib/archive/3.3.0.zip
+unzip 3.3.0.zip
+mv opencv_contrib-3.3.0 opencv_contrib
+rm 3.3.0.zip
 
-cd ~/workspace/opencv/
+cd opencv
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
  -D CMAKE_INSTALL_PREFIX=/usr/local \
- -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
+ -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
  -D ENABLE_NEON=ON \
  -D ENABLE_VFPV3=ON \
  -D BUILD_TESTS=OFF \
