@@ -55,3 +55,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 ### Run tiny_yolo or ssd with the camera
 
 [Source](https://www.pyimagesearch.com/2018/02/19/real-time-object-detection-on-the-raspberry-pi-with-the-movidius-ncs/), but start from `Object detection with the Intel Movidius Neural Compute Stick`, ignore all previous sections.
+
+## TODO
+
+- [ ] Add log file => know where to resume in case of unexpected crash
