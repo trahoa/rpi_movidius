@@ -50,18 +50,8 @@ Filesystem      Size  Used Avail Use% Mounted on
 - Run `sudo raspi-config`, enable camera then reboot.
 - To take a photo, run `raspistill -o image.jpg`
 - To record a 10-second video, run `raspivid -o video.h264 -t 10000`
-- Install GStreamer element for the Raspberry Pi camera module ([gst-rpicamsrc](https://github.com/thaytan/gst-rpicamsrc))
-
-```bash
-apt-get install -y autoconf automake libtool pkg-config libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libraspberrypi-dev
-cd ~/workspace
-git clone https://github.com/thaytan/gst-rpicamsrc
-cd gst-rpicamsrc
-./autogen.sh --prefix=/usr --libdir=/usr/lib/arm-linux-gnueabihf/
-make
-sudo make install
-gst-launch-1.0 rpicamsrc bitrate=1000000 fullscreen=0 ! video/x-h264,width=640,height=480,framerate=25/1 ! filesink location=test.h264
-```
+- To [use camera with python and opencv](https://www.pyimagesearch.com/2015/03/30/accessing-the-raspberry-pi-camera-with-opencv-and-python/)
 
 ### Run tiny_yolo or ssd with the camera
 
+[Source](https://www.pyimagesearch.com/2018/02/19/real-time-object-detection-on-the-raspberry-pi-with-the-movidius-ncs/), but start from `Object detection with the Intel Movidius Neural Compute Stick`, ignore all previous sections.
