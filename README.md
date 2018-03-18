@@ -20,17 +20,16 @@ bash setup_all.sh
 ```bash
 $ df -h
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        14G  7.7G  4.7G  63% /
+/dev/root        14G  11G  1.6G  88% /
 ```
 
 - Remove all compiled examples to reclaim some space
 ```bash
 cd ~/workspace
-rm -rf ncsdk
-git clone https://github.com/movidius/ncsdk
+rm -rf ncsdk/examples
 $ df -h
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        14G  6.9G  5.5G  56% /
+/dev/root        14G  10G  2.5G  81% /
 ```
 
 - Remove opencv folders to reclaim more space
@@ -38,9 +37,6 @@ Filesystem      Size  Used Avail Use% Mounted on
 cd ~/workspace
 rm -rf opencv
 rm -rf opencv_contrib
-$ df -h
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/root        14G  6.7G  5.8G  54% /
 ```
 
 ## Camera
