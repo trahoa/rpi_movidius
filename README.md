@@ -42,3 +42,13 @@ $ df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/root        14G  6.7G  5.8G  54% /
 ```
+
+## Camera
+
+### Connect a camera and make sure that it works [Source](https://thepihut.com/blogs/raspberry-pi-tutorials/16021420-how-to-install-use-the-raspberry-pi-camera)
+
+- Run `sudo raspi-config`, enable camera then reboot.
+- To take a photo, run `raspistill -o image.jpg`
+- To record a 10-second video, run `raspivid -o video.h264 -t 10000`
+
+### Run tiny_yolo or ssd with the camera
