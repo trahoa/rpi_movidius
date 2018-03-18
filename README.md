@@ -14,6 +14,13 @@ cd rpi_movidius
 bash setup_all.sh
 ```
 
+To run SSD_MobileNet example
+
+```bash
+cd ~/workspace/ncappzoo/caffe/SSD_MobileNet
+make run
+```
+
 ## Post-installation
 
 - If the setup does not return any errors, you have 4.7 GB left (on a 16GB SD Card)
