@@ -4,7 +4,7 @@ Movidius NCSDK on Raspberry Pi 3
 ## Important:
 
 - The Movidius stick must be plugged during installation
-- This will take a looong time to finish, aprrox 5 hours
+- This will take a looong time to finish, approx 5 hours
 
 ## Usage
 
@@ -16,7 +16,7 @@ bash setup_all.sh
 
 ## Post-installation
 
-- If the setup does not return any errors, you have 4.7 GB left
+- If the setup does not return any errors, you have 4.7 GB left (on a 16GB SD Card)
 ```bash
 $ df -h
 Filesystem      Size  Used Avail Use% Mounted on
