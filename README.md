@@ -16,8 +16,29 @@ bash setup_all.sh
 
 ## Post-installation
 
-If the setup does not return any errors, you can run following commands to remove all compiled examples:
-
+- If the setup does not return any errors, you have 4.7 GB left
 ```bash
-run something here
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        14G  7.7G  4.7G  63% /
+```
+
+- Remove all compiled examples to reclaim some space
+```bash
+cd ~/workspace
+rm -rf ncsdk
+git clone https://github.com/movidius/ncsdk
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        14G  6.9G  5.5G  56% /
+```
+
+- Remove opencv folders to reclaim more space
+```bash
+cd ~/workspace
+rm -rf opencv
+rm -rf opencv_contrib
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        14G  6.7G  5.8G  54% /
 ```
